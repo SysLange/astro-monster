@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="Astro Monster"
+run/main_scene="uid://cy0nritcsc2g2"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/size/mode=3
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
+window/handheld/orientation=1
 
 [physics]
 
