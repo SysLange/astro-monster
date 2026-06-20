@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dt6bkmymyykq3"]
+
+[ext_resource type="Texture2D" uid="uid://ccrmq5kpfjfsj" path="res://assets/platformer/tiles/terrain_grass_cloud_left.png" id="1_motb6"]
+[ext_resource type="Script" uid="uid://w8ly46sdudbf" path="res://scripts/Platform.gd" id="1_o1scf"]
+[ext_resource type="Texture2D" uid="uid://hedl62bwo74a" path="res://assets/platformer/tiles/terrain_grass_cloud_middle.png" id="2_o1scf"]
+[ext_resource type="Texture2D" uid="uid://jooh4kykkjek" path="res://assets/platformer/tiles/terrain_grass_cloud_right.png" id="2_wwpbi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1scf"]
+size = Vector2(384, 104)
+
+[node name="Platform" type="AnimatableBody2D" unique_id=2113607432]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_o1scf")
+
+[node name="SpriteLeft" type="Sprite2D" parent="." unique_id=1022524640]
+position = Vector2(-128, 0)
+texture = ExtResource("1_motb6")
+
+[node name="SpriteMiddle" type="Sprite2D" parent="." unique_id=2050071979]
+texture = ExtResource("2_o1scf")
+
+[node name="SpriteRight" type="Sprite2D" parent="." unique_id=1310708533]
+position = Vector2(128, 0)
+texture = ExtResource("2_wwpbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1111379627]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_o1scf")
+one_way_collision = true

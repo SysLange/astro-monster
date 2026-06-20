@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://bocbituocs3fi"]
 
-[ext_resource type="Texture2D" uid="uid://cahai51nmt2pt" path="res://assets/Sprites/Characters/character_beige_front.png" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://8pudgssfb3m4" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://dtbu82hxogk5y" path="res://assets/platformer/characters/character_yellow_idle.png" id="1_p0vlq"]
+[ext_resource type="Script" uid="uid://5kr27cyq6o4p" path="res://scripts/Player.gd" id="1_v6fml"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(155, 194)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
+size = Vector2(160, 192)
 
-[node name="Node2D" type="CharacterBody2D" unique_id=1121484073]
-script = ExtResource("1_g2els")
+[node name="Player" type="CharacterBody2D" unique_id=1666646684]
+script = ExtResource("1_v6fml")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=315135277]
-position = Vector2(0.5, 31)
-shape = SubResource("RectangleShape2D_g2els")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=880289110]
+texture = ExtResource("1_p0vlq")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1632802124]
-texture = ExtResource("1_3vyb7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=590881375]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_v6fml")

@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://ctoio8wfbmtjo"]
+
+[ext_resource type="Texture2D" uid="uid://byvx136wvba06" path="res://assets/platformer/backgrounds/game_over_dirt.png" id="1_6bcno"]
+[ext_resource type="Script" uid="uid://c3bux1qlb4j2k" path="res://scripts/GameOver.gd" id="1_gijjb"]
+[ext_resource type="FontFile" uid="uid://c7o5gsv6kan8l" path="res://assets/UI/font/Kenney Future.ttf" id="2_vuicl"]
+[ext_resource type="Texture2D" uid="uid://ccoahtw0qwwsf" path="res://assets/UI/red/button_rectangle_depth_flat.png" id="3_4noiy"]
+[ext_resource type="Texture2D" uid="uid://dtbu82hxogk5y" path="res://assets/platformer/characters/character_yellow_idle.png" id="3_88ekj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gijjb"]
+font = ExtResource("2_vuicl")
+font_size = 75
+
+[sub_resource type="LabelSettings" id="LabelSettings_88ekj"]
+font = ExtResource("2_vuicl")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_0winm"]
+font = ExtResource("2_vuicl")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_j3qfp"]
+font = ExtResource("2_vuicl")
+font_size = 50
+
+[node name="GameOver" type="Control" unique_id=1066898590]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gijjb")
+
+[node name="Background" type="TextureRect" parent="." unique_id=89862657]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6bcno")
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=743671586]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -20.0
+offset_right = 43.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=1999853243]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_88ekj")
+stretch_mode = 2
+
+[node name="GameOverLabel" type="Label" parent="VBoxContainer" unique_id=1907869373]
+layout_mode = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_gijjb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer" unique_id=1125692155]
+layout_mode = 2
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_88ekj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="VBoxContainer" unique_id=1200120408]
+layout_mode = 2
+text = "Highscore: 0"
+label_settings = SubResource("LabelSettings_0winm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1772445230]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("3_4noiy")
+flat = true
+
+[node name="Label" type="Label" parent="VBoxContainer/Button" unique_id=1741591960]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Menü"
+label_settings = SubResource("LabelSettings_j3qfp")
+horizontal_alignment = 1
+vertical_alignment = 1

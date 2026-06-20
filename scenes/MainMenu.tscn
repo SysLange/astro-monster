@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://dhuh1hk28wvyx"]
+
+[ext_resource type="Script" uid="uid://dywxdg4ufemmo" path="res://scripts/MainMenu.gd" id="1_l72w3"]
+[ext_resource type="Texture2D" uid="uid://casidpvi1lthv" path="res://assets/platformer/backgrounds/main_menu_trees.png" id="1_yqorp"]
+[ext_resource type="FontFile" uid="uid://c7o5gsv6kan8l" path="res://assets/UI/font/Kenney Future.ttf" id="2_2wh52"]
+[ext_resource type="Texture2D" uid="uid://dtbu82hxogk5y" path="res://assets/platformer/characters/character_yellow_idle.png" id="2_ow34m"]
+[ext_resource type="Texture2D" uid="uid://ccoahtw0qwwsf" path="res://assets/UI/red/button_rectangle_depth_flat.png" id="3_ow34m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l72w3"]
+font = ExtResource("2_2wh52")
+font_size = 75
+
+[sub_resource type="LabelSettings" id="LabelSettings_826wr"]
+font = ExtResource("2_2wh52")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_ucygd"]
+font = ExtResource("2_2wh52")
+font_size = 50
+
+[node name="MainMenu" type="Control" unique_id=1811865542]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l72w3")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1884772224]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yqorp")
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1556094376]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -395.5
+offset_top = -325.0
+offset_right = 395.5
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Character" type="TextureRect" parent="VBoxContainer" unique_id=557363041]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ow34m")
+stretch_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=2038231690]
+layout_mode = 2
+text = "Astro Monster"
+label_settings = SubResource("LabelSettings_l72w3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="VBoxContainer" unique_id=681187624]
+layout_mode = 2
+text = "Highscore: 123"
+label_settings = SubResource("LabelSettings_826wr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1289213296]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("3_ow34m")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/PlayButton" unique_id=1449036234]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SPIELEN"
+label_settings = SubResource("LabelSettings_ucygd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkinButton" type="Button" parent="VBoxContainer" unique_id=1521164554]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("3_ow34m")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/SkinButton" unique_id=582614639]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SKIN"
+label_settings = SubResource("LabelSettings_ucygd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=897685413]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("3_ow34m")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/QuitButton" unique_id=1861255406]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "BEENDEN"
+label_settings = SubResource("LabelSettings_ucygd")
+horizontal_alignment = 1
+vertical_alignment = 1

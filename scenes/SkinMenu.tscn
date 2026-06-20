@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://dgly8e8brl1r1"]
+
+[ext_resource type="Script" uid="uid://do7c3ul2jo2rq" path="res://scripts/SkinSelect.gd" id="1_7pwwt"]
+[ext_resource type="Texture2D" uid="uid://cgeek88gbckra" path="res://assets/platformer/backgrounds/skin_select_sand.png" id="2_bpvsk"]
+[ext_resource type="FontFile" uid="uid://c7o5gsv6kan8l" path="res://assets/UI/font/Kenney Future.ttf" id="3_vv6we"]
+[ext_resource type="Texture2D" uid="uid://cjocoeu2hfdyp" path="res://assets/UI/red/arrow_decorative_w.png" id="4_7neqj"]
+[ext_resource type="Texture2D" uid="uid://dtbu82hxogk5y" path="res://assets/platformer/characters/character_yellow_idle.png" id="5_c10qx"]
+[ext_resource type="Texture2D" uid="uid://c0aw0tvw40gdf" path="res://assets/UI/red/arrow_decorative_e.png" id="6_q22w2"]
+[ext_resource type="Texture2D" uid="uid://ccoahtw0qwwsf" path="res://assets/UI/red/button_rectangle_depth_flat.png" id="7_4cl5n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0lbol"]
+font = ExtResource("3_vv6we")
+font_size = 75
+
+[sub_resource type="LabelSettings" id="LabelSettings_t4mnu"]
+font = ExtResource("3_vv6we")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_ojcjh"]
+font = ExtResource("3_vv6we")
+font_size = 50
+
+[node name="SkinSelect" type="Control" unique_id=727744095]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7pwwt")
+
+[node name="Background" type="TextureRect" parent="." unique_id=887414016]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bpvsk")
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=785782164]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.5
+offset_top = -28.5
+offset_right = 209.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1646372657]
+layout_mode = 2
+text = "CHOOSE SKIN"
+label_settings = SubResource("LabelSettings_0lbol")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Selector" type="HBoxContainer" parent="VBoxContainer" unique_id=97050559]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="PrevButton" type="Button" parent="VBoxContainer/Selector" unique_id=60501765]
+layout_mode = 2
+icon = ExtResource("4_7neqj")
+flat = true
+
+[node name="PreviewTexture" type="TextureRect" parent="VBoxContainer/Selector" unique_id=1023050258]
+layout_mode = 2
+texture = ExtResource("5_c10qx")
+
+[node name="NextButton" type="Button" parent="VBoxContainer/Selector" unique_id=45590689]
+layout_mode = 2
+icon = ExtResource("6_q22w2")
+flat = true
+
+[node name="PreviewName" type="Label" parent="VBoxContainer" unique_id=1324255362]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "NAME"
+label_settings = SubResource("LabelSettings_t4mnu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=683423935]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("7_4cl5n")
+
+[node name="Label" type="Label" parent="VBoxContainer/BackButton" unique_id=154472033]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -11.5
+offset_right = 21.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "ZURÜCK"
+label_settings = SubResource("LabelSettings_ojcjh")
