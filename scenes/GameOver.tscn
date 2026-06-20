@@ -9,18 +9,26 @@
 [sub_resource type="LabelSettings" id="LabelSettings_gijjb"]
 font = ExtResource("2_vuicl")
 font_size = 75
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_88ekj"]
 font = ExtResource("2_vuicl")
 font_size = 50
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0winm"]
 font = ExtResource("2_vuicl")
 font_size = 50
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_j3qfp"]
 font = ExtResource("2_vuicl")
 font_size = 50
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="GameOver" type="Control" unique_id=1066898590]
 layout_mode = 3

@@ -9,14 +9,20 @@
 [sub_resource type="LabelSettings" id="LabelSettings_l72w3"]
 font = ExtResource("2_2wh52")
 font_size = 75
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_826wr"]
 font = ExtResource("2_2wh52")
 font_size = 50
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ucygd"]
 font = ExtResource("2_2wh52")
 font_size = 50
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="MainMenu" type="Control" unique_id=1811865542]
 layout_mode = 3

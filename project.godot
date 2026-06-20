@@ -26,6 +26,12 @@ window/size/viewport_height=1920
 window/stretch/mode="canvas_items"
 window/handheld/orientation=1
 
+[global_group]
+
+player=""
+platform=""
+coin=""
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

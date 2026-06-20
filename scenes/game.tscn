@@ -3,17 +3,22 @@
 [ext_resource type="Script" uid="uid://ld8dkm2xmfdk" path="res://scripts/Game.gd" id="1_78awf"]
 [ext_resource type="FontFile" uid="uid://c7o5gsv6kan8l" path="res://assets/UI/font/Kenney Future.ttf" id="1_qbsmt"]
 [ext_resource type="PackedScene" uid="uid://dt6bkmymyykq3" path="res://scenes/Platform.tscn" id="2_qbsmt"]
+[ext_resource type="Texture2D" uid="uid://b72memxoanl86" path="res://assets/UI/red/arrow_basic_w.png" id="3_aug50"]
 [ext_resource type="PackedScene" uid="uid://bocbituocs3fi" path="res://scenes/Player.tscn" id="3_cpr0p"]
+[ext_resource type="Texture2D" uid="uid://b5jgntxq8c2ew" path="res://assets/UI/red/arrow_basic_e.png" id="4_kiw3p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cpr0p"]
 font = ExtResource("1_qbsmt")
 font_size = 50
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="Game" type="Node2D" unique_id=1885021672]
 script = ExtResource("1_78awf")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=649658291]
 position = Vector2(540, 960)
+ignore_rotation = false
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1436200474]
 
@@ -32,6 +37,39 @@ text = "SCORE:
 label_settings = SubResource("LabelSettings_cpr0p")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ButtonLeft" type="Button" parent="HUD" unique_id=1755405906]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -208.0
+offset_right = 136.0
+offset_bottom = -136.0
+grow_vertical = 0
+scale = Vector2(2, 2)
+action_mode = 0
+icon = ExtResource("3_aug50")
+flat = true
+
+[node name="ButtonRight" type="Button" parent="HUD" unique_id=75513456]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -208.0
+offset_top = -208.0
+offset_right = -136.0
+offset_bottom = -136.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+size_flags_horizontal = 8
+size_flags_vertical = 0
+action_mode = 0
+icon = ExtResource("4_kiw3p")
+flat = true
 
 [node name="Player" parent="." unique_id=1666646684 instance=ExtResource("3_cpr0p")]
 z_index = 1

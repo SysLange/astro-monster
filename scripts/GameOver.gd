@@ -10,3 +10,5 @@ func _ready() -> void:
 		$VBoxContainer/TextureRect.texture = load("res://assets/platformer/characters/character_" + Global.skin_colors[Global.selected_skin] + "_hit.png")
 	else:
 		$VBoxContainer/TextureRect.texture = load("res://assets/platformer/characters/character_" + Global.skin_colors[Global.selected_skin] + "_jump.png")
+		
+	Global.last_score = 0

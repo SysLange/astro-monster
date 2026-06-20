@@ -11,14 +11,20 @@
 [sub_resource type="LabelSettings" id="LabelSettings_0lbol"]
 font = ExtResource("3_vv6we")
 font_size = 75
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_t4mnu"]
 font = ExtResource("3_vv6we")
 font_size = 50
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ojcjh"]
 font = ExtResource("3_vv6we")
 font_size = 50
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="SkinSelect" type="Control" unique_id=727744095]
 layout_mode = 3
@@ -56,7 +62,7 @@ theme_override_constants/separation = 50
 
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1646372657]
 layout_mode = 2
-text = "CHOOSE SKIN"
+text = "Skin Auswahl"
 label_settings = SubResource("LabelSettings_0lbol")
 horizontal_alignment = 1
 vertical_alignment = 1

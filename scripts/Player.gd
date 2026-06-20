@@ -18,24 +18,6 @@ func _ready() -> void:
 	Sprite.texture = fall_texture
 
 func _physics_process(delta: float) -> void:
-	if OS.get_name() == "Android" or OS.get_name() == "iOS":
-		var accel: Vector3 = Input.get_accelerometer()
-		var tilt: float = 0.0
-		
-		tilt = accel.x
-		
-		var threshold: float = 1.0 
-		
-		if tilt > threshold:
-			Input.action_press("ui_right")
-			Input.action_release("ui_left")
-		elif tilt < -threshold:
-			Input.action_press("ui_left")
-			Input.action_release("ui_right")
-		else:
-			Input.action_release("ui_left")
-			Input.action_release("ui_right")
-	
 	velocity.y += GRAVITY * delta
 	
 	var direction := 0.0
@@ -48,6 +30,15 @@ func _physics_process(delta: float) -> void:
 	velocity.x = direction * MOVE_SPEED
 	
 	move_and_slide()
+	
+	# collisions
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if "type" in collider:
+			# 2
+			if collider.type == 2:
+				collider.queue_free()
 	
 	if position.x < -40:
 		position.x = screen_width + 40
