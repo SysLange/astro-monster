@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://cq20cuh1tkaqt"]
+
+[ext_resource type="Script" uid="uid://bbdnvo3vmpvt7" path="res://scripts/SettingsMenu.gd" id="1_t7ar5"]
+[ext_resource type="Texture2D" uid="uid://casidpvi1lthv" path="res://assets/platformer/backgrounds/main_menu_trees.png" id="1_yelko"]
+[ext_resource type="FontFile" uid="uid://c7o5gsv6kan8l" path="res://assets/UI/font/Kenney Future.ttf" id="2_dd8lr"]
+[ext_resource type="Texture2D" uid="uid://ccoahtw0qwwsf" path="res://assets/UI/red/button_rectangle_depth_flat.png" id="3_t7ar5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ldnee"]
+font = ExtResource("2_dd8lr")
+font_size = 75
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fl0th"]
+font = ExtResource("2_dd8lr")
+font_size = 50
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nuakw"]
+font = ExtResource("2_dd8lr")
+font_size = 50
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_t7ar5"]
+font = ExtResource("2_dd8lr")
+font_size = 50
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="SettingsMenu" type="Control" unique_id=1324956232]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t7ar5")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1476310577]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yelko")
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=322793202]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1658213454]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "OPTIONEN"
+label_settings = SubResource("LabelSettings_ldnee")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="optionInputType" type="VBoxContainer" parent="VBoxContainer" unique_id=552450496]
+layout_mode = 2
+
+[node name="title" type="Label" parent="VBoxContainer/optionInputType" unique_id=1500358289]
+layout_mode = 2
+text = "EINGABE:"
+label_settings = SubResource("LabelSettings_fl0th")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/optionInputType" unique_id=2130205141]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("3_t7ar5")
+flat = true
+
+[node name="current" type="Label" parent="VBoxContainer/optionInputType/Button" unique_id=1457569364]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "BUTTONS"
+label_settings = SubResource("LabelSettings_nuakw")
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=1531005330]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("3_t7ar5")
+flat = true
+
+[node name="Label" type="Label" parent="VBoxContainer/BackButton" unique_id=861881302]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "ZURÜCK"
+label_settings = SubResource("LabelSettings_t7ar5")

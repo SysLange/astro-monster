@@ -12,6 +12,7 @@ func _ready() -> void:
 	
 	$VBoxContainer/PlayButton.pressed.connect(func(): TransitionManager.change_scene_smooth("res://scenes/Game.tscn"))
 	$VBoxContainer/SkinButton.pressed.connect(func(): TransitionManager.change_scene_smooth("res://scenes/SkinMenu.tscn"))
+	$VBoxContainer/SettingsButton.pressed.connect(func(): TransitionManager.change_scene_smooth("res://scenes/SettingsMenu.tscn"))
 	$VBoxContainer/QuitButton.pressed.connect(func(): get_tree().quit())
 	
 	character.texture = load("res://assets/platformer/characters/character_" + Global.skin_colors[Global.selected_skin] + "_front.png")

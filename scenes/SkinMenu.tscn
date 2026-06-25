@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cgeek88gbckra" path="res://assets/platformer/backgrounds/skin_select_sand.png" id="2_bpvsk"]
 [ext_resource type="FontFile" uid="uid://c7o5gsv6kan8l" path="res://assets/UI/font/Kenney Future.ttf" id="3_vv6we"]
 [ext_resource type="Texture2D" uid="uid://cjocoeu2hfdyp" path="res://assets/UI/red/arrow_decorative_w.png" id="4_7neqj"]
-[ext_resource type="Texture2D" uid="uid://dtbu82hxogk5y" path="res://assets/platformer/characters/character_yellow_idle.png" id="5_c10qx"]
+[ext_resource type="Texture2D" uid="uid://c7y56isbs2qss" path="res://assets/platformer/characters/character_yellow_idle.png" id="5_c10qx"]
 [ext_resource type="Texture2D" uid="uid://c0aw0tvw40gdf" path="res://assets/UI/red/arrow_decorative_e.png" id="6_q22w2"]
 [ext_resource type="Texture2D" uid="uid://ccoahtw0qwwsf" path="res://assets/UI/red/button_rectangle_depth_flat.png" id="7_4cl5n"]
 
@@ -97,6 +97,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 icon = ExtResource("7_4cl5n")
+flat = true
 
 [node name="Label" type="Label" parent="VBoxContainer/BackButton" unique_id=154472033]
 layout_mode = 1

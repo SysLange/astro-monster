@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c3bux1qlb4j2k" path="res://scripts/GameOver.gd" id="1_gijjb"]
 [ext_resource type="FontFile" uid="uid://c7o5gsv6kan8l" path="res://assets/UI/font/Kenney Future.ttf" id="2_vuicl"]
 [ext_resource type="Texture2D" uid="uid://ccoahtw0qwwsf" path="res://assets/UI/red/button_rectangle_depth_flat.png" id="3_4noiy"]
-[ext_resource type="Texture2D" uid="uid://dtbu82hxogk5y" path="res://assets/platformer/characters/character_yellow_idle.png" id="3_88ekj"]
+[ext_resource type="Texture2D" uid="uid://c7y56isbs2qss" path="res://assets/platformer/characters/character_yellow_idle.png" id="3_88ekj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gijjb"]
 font = ExtResource("2_vuicl")

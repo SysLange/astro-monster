@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dywxdg4ufemmo" path="res://scripts/MainMenu.gd" id="1_l72w3"]
 [ext_resource type="Texture2D" uid="uid://casidpvi1lthv" path="res://assets/platformer/backgrounds/main_menu_trees.png" id="1_yqorp"]
 [ext_resource type="FontFile" uid="uid://c7o5gsv6kan8l" path="res://assets/UI/font/Kenney Future.ttf" id="2_2wh52"]
-[ext_resource type="Texture2D" uid="uid://dtbu82hxogk5y" path="res://assets/platformer/characters/character_yellow_idle.png" id="2_ow34m"]
+[ext_resource type="Texture2D" uid="uid://c7y56isbs2qss" path="res://assets/platformer/characters/character_yellow_idle.png" id="2_ow34m"]
 [ext_resource type="Texture2D" uid="uid://ccoahtw0qwwsf" path="res://assets/UI/red/button_rectangle_depth_flat.png" id="3_ow34m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_l72w3"]
@@ -115,6 +115,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "SKIN"
+label_settings = SubResource("LabelSettings_ucygd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer" unique_id=271765058]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("3_ow34m")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/SettingsButton" unique_id=119320735]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "OPTIONEN"
 label_settings = SubResource("LabelSettings_ucygd")
 horizontal_alignment = 1
 vertical_alignment = 1

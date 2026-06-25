@@ -6,6 +6,7 @@ const SAVE_PATH := "user://save.json"
 var high_score: int = 0
 var last_score: int = 0
 var selected_skin: int = 0
+var input_type: bool = true # true: buttons, false: tilt
 
 var skin_colors: Array[String] = [
 	"beige",
@@ -35,6 +36,7 @@ func save_game() -> void:
 	var data := {
 		"high_score": high_score,
 		"selected_skin": selected_skin,
+		"input_type": input_type,
 	}
 	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if file:
@@ -52,3 +54,4 @@ func load_game() -> void:
 		if typeof(parsed) == TYPE_DICTIONARY:
 			high_score = parsed.get("high_score", 0)
 			selected_skin = parsed.get("selected_skin", 0)
+			input_type = parsed.get("input_type", true)

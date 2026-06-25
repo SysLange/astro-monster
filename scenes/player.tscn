@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bocbituocs3fi"]
 
-[ext_resource type="Texture2D" uid="uid://dtbu82hxogk5y" path="res://assets/platformer/characters/character_yellow_idle.png" id="1_p0vlq"]
+[ext_resource type="Texture2D" uid="uid://c7y56isbs2qss" path="res://assets/platformer/characters/character_yellow_idle.png" id="1_p0vlq"]
 [ext_resource type="Script" uid="uid://5kr27cyq6o4p" path="res://scripts/Player.gd" id="1_v6fml"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
@@ -13,5 +13,6 @@ script = ExtResource("1_v6fml")
 texture = ExtResource("1_p0vlq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=590881375]
+visible = false
 position = Vector2(0, 32)
 shape = SubResource("RectangleShape2D_v6fml")

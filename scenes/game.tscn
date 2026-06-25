@@ -42,15 +42,15 @@ vertical_alignment = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 64.0
-offset_top = -208.0
-offset_right = 136.0
-offset_bottom = -136.0
+offset_top = -256.0
+offset_right = 128.0
+offset_bottom = -128.0
 grow_vertical = 0
 scale = Vector2(2, 2)
 action_mode = 0
 icon = ExtResource("3_aug50")
 flat = true
+icon_alignment = 1
 
 [node name="ButtonRight" type="Button" parent="HUD" unique_id=75513456]
 anchors_preset = 3
@@ -58,10 +58,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -208.0
-offset_top = -208.0
-offset_right = -136.0
-offset_bottom = -136.0
+offset_left = -256.0
+offset_top = -256.0
+offset_right = -128.0
+offset_bottom = -128.0
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(2, 2)
@@ -70,6 +70,7 @@ size_flags_vertical = 0
 action_mode = 0
 icon = ExtResource("4_kiw3p")
 flat = true
+icon_alignment = 1
 
 [node name="Player" parent="." unique_id=1666646684 instance=ExtResource("3_cpr0p")]
 z_index = 1
